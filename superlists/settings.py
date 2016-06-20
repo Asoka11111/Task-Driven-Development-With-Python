@@ -76,6 +76,12 @@ TEMPLATES = [
     },
 ]
 
+LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ('854609364508-j9s4gj4dee5qe18tdpmr3cr7gcmrs22b.apps.googleusercontent.com')
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'sLuS8UlWoTzIj3x_J4vlTjhd'
+SOCIAL_AUTH_TWITTER_KEY = '4mG1Ztchyr1xIlkGmJtBoXFaU'
+SOCIAL_AUTH_TWITTER_SECRET =('qen49C2A0PrOzg7WkrypXbCpLVav7K1mSZT2cMsvtiWlieMI7o')
+
 AUTHENTICATION_BACKENDS = (
    'social.backends.facebook.FacebookOAuth2',
    'social.backends.google.GoogleOAuth2',

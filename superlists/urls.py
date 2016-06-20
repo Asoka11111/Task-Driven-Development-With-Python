@@ -14,13 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
 from lists import views as list_views
 from lists import urls as list_urls
+
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', list_views.home_page, name='home'),
     url(r'^lists/', include(list_urls)),
     url('', include('social.apps.django_app.urls', namespace='social')),
+    url('', include('django.contrib.auth.urls', namespace='auth')),
+    
+    
+    
 ]
