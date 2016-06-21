@@ -25,7 +25,7 @@ SECRET_KEY = 'dvr5iyiyiczfly4lh=kc@@8d3w(-gx)&2$7$ho7@m@0(m9_ijt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tdd-akosa.herokuapp.com']
 
 
 # Application definition
@@ -122,3 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
+
+SECURE_PROXY_SSL_HEADER = (‘HTTP_X_FORWARDED_PROTO’, ‘https’)

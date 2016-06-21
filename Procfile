@@ -1,1 +1,1 @@
-web: python superlists/manage.py runserver "0.0.0.0:$PORT"
+web: gunicorn superlists.wsgi:application --log-file -
